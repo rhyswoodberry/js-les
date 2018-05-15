@@ -13,3 +13,7 @@ class Person {
 
 person = new Person('Jonh', 'Citizen')
 console.log(person.fullName())
+
+class Employee extends Person {
+	constructor(firstName, lastName)
+}
