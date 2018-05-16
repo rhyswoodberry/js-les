@@ -1,5 +1,6 @@
 function stepOne(cb) {
   // do something
+  stepTwo() 
   cb()
 }
 
