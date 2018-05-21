@@ -6,3 +6,8 @@ let promise = new Promise((resolve, reject) => {
       reject()
   }
 })
+
+promise.then(
+    (value) => { console.log(`resolved to ${value}`) },
+    () => { console.log('rejected') }    
+)
