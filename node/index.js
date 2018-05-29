@@ -1,4 +1,5 @@
-const { students, teachers } = require('./app/index.js')
+const _ = require('loadash')
+const { students, teachers } = require('./app')
 
 students.forEach( student => {
   console.log(student)
