@@ -26,6 +26,7 @@ app.get('/students', (req, resp) => {
 })
 
 app.get('/students/:id', (req, resp) => {
+  console.log(`id=${req.params.id}`)
   resp.send('GET students#show(:id)')
 })
 
