@@ -6,23 +6,31 @@ const app = express()
 const port = 4000
 
 
-students.forEach( student => {
-  console.log(student)
-})
+// students.forEach( student => {
+//   console.log(student)
+// })
 
-teachers.forEach(teacher => {
-  console.log(teacher)
-})
+// teachers.forEach(teacher => {
+//   console.log(teacher)
+// })
 
 // Express
 
-app.use((req, resp, nect) => {
+app.use((req, resp, next) => {
   console.log(req.headers)
   next()
 })
 
-app.get('/', (req, resp) => {
-  resp.send('Hello from Express')
+app.get('/students', (req, resp) => {
+  resp.send('GET students#index')
+})
+
+app.get('/students/:id', (req, resp) => {
+  resp.send('GET students#show(:id)')
+})
+
+app.post('/students', (req, resp) => {
+  resp.send('POST students#create(:id)')
 })
 
 app.listen(port, (err) => {
