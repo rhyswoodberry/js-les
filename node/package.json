@@ -9,6 +9,7 @@
   "author": "Rhys Woodberry",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.16.3",
     "loadash": "^1.0.0"
   }
 }
