@@ -24,4 +24,5 @@ app.listen(port, (err) => {
   if (err) {
     return console.log('Error! ' + err)
   }
+  console.log(`Server started on port ${port}`)
 })
