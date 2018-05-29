@@ -1,3 +1,5 @@
+const { students, teachers } = require('./app/index.js')
+
 students.forEach( student => {
   console.log(student)
 })
