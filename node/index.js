@@ -15,7 +15,6 @@ const port = 4000
 // })
 
 // Express
-
 app.use((req, resp, next) => {
   console.log(req.headers)
   next()
@@ -31,7 +30,7 @@ app.get('/students/:id', (req, resp) => {
 })
 
 app.post('/students', (req, resp) => {
-  resp.send('POST students#create(:id)')
+  resp.send('POST students#create')
 })
 
 app.listen(port, (err) => {
