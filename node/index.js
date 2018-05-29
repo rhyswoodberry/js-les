@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const { students, teachers } = require('./app')
+const studentsRouter = require('express')
 
 const express = require('express')
 const app = express()
@@ -20,18 +21,7 @@ app.use((req, resp, next) => {
   next()
 })
 
-app.get('/students', (req, resp) => {
-  resp.send('GET students#index')
-})
-
-app.get('/students/:id', (req, resp) => {
-  console.log(`id=${req.params.id}`)
-  resp.send('GET students#show(:id)')
-})
-
-app.post('/students', (req, resp) => {
-  resp.send('POST students#create')
-})
+app.use('/', studentsRouter);
 
 app.listen(port, (err) => {
   if (err) {
