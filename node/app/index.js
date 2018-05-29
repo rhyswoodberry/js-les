@@ -1,11 +1,2 @@
 const students = [{ id: 666, first_name: 'Jane', last_name: 'Smyth' }]
 const teachers = [{ id: 888, first_name: 'Tom', last_name: 'Gordon' }]
-
-
-students.forEach( student => {
-  console.log(student)
-})
-
-teachers.forEach(teacher => {
-  console.log(teacher)
-})
