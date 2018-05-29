@@ -1,5 +1,7 @@
-var express = require('express')
-var router = express.Router()
+const express = require('express')
+const db = require('./db')
+
+const router = express.Router()
 
 app.get('/students', (req, resp) => {
   resp.send('GET students#index')
