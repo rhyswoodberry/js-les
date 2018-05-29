@@ -16,6 +16,11 @@ teachers.forEach(teacher => {
 
 // Express
 
+app.use((req, resp, nect) => {
+  console.log(req.headers)
+  next()
+})
+
 app.get('/', (req, resp) => {
   resp.send('Hello from Express')
 })
