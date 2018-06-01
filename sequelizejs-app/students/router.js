@@ -1,15 +1,18 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/students', (req, resp) => {
-  resp.send('/GET')
+router.get('/', (req, resp) => {
+  Student.findAll().then(results => {
+    console.dir(results)
+    resp.send(results)
+  })
 })
 
-router.get('/students/:id', (req, resp) => {
+router.get('/:id', (req, resp) => {
   console.log(`id=${req.params.id}`)
 })
 
-router.post('/students', (req, resp) => {
+router.post('/', (req, resp) => {
   console.dir(req.body)
 })
 
