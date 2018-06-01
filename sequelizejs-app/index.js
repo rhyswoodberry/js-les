@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const studentsRouter = require('express');
+const studentsRouter = require('./students/router');
 const sequelize = require('./db')
 
 const app = express();
