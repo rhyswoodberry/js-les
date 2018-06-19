@@ -3,7 +3,10 @@ const express = require('express')
 const server = express()
 
 server.get('/movies', (req, resp) => {
-  resp.json([])
+  Movie.find({}).then(movies => {
+    console.log(movies)
+    resp.json([])
+  })
 })
 
 server.get('/test', (req, resp) => {
